@@ -1,0 +1,44 @@
+<form action="/favoritedetails" method="post">
+
+	<p>Full Name:<input type="text" name="name"></p>
+
+	<p>Age:<input type="text" name="age"></p>
+
+	<p>Three Favorite Numbers:<input type="text" name="fav_num"><input type="text" name="second_fav_num"><input type="text" name="third_fav_num"></p>
+
+	<p>Favorite Color:<input type="text" name="fav_color"></p>
+
+	<p>Favorite Sports Team:<input type="text" name="fav_team"></p>
+
+	<p>Favorite Athlete:<input type="text" name="fav_player"></p>
+
+	<input type="submit" name="Just Do It!">
+	</form>
+	<p><table class=""></p>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>1st Fav Number</th>
+				<th>2nd Fav Number</th>
+				<th>3rd Fav Number</th>
+				<th>Favorite Color</th>
+				<th>Favorite Sports Team</th>
+				<th>Favorite Athlete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%favoritedetails.each do |fav|%>
+			<tr>
+				<td><%=fav["name"] %></td>
+				<td><%=fav["age"] %></td>
+				<td><%=fav["fav_num"] %></td>
+				<td><%=fav["second_fav_num"] %></td>
+				<td><%=fav["third_fav_num"] %></td>
+				<td><%=fav["fav_color"] %></td>
+				<td><%=fav["fav_team"] %></td>
+				<td><%=fav["fav_player"] %></td>
+			</tr>
+			<%end%>
+		</tbody>
+	</table>

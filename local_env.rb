@@ -1,0 +1,5 @@
+ENV['host'] = ''
+ENV['port'] = '5432'
+ENV['db_name'] = 'favoritedetails'
+ENV['user'] = 'chad'
+ENV['password'] = 'minedminds'
