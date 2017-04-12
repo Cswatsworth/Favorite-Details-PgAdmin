@@ -30,3 +30,9 @@ post '/favoritedetails' do
 	db.exec("INSERT INTO favoritedetails(name, age, fav_num, second_fav_num, third_fav_num, fav_team fav_color, fav_player) VALUES('#{name}', '#{age}', '#{fav_num}', '#{second_fav_num}', '#{third_fav_num}', '#{fav_team}', '#{fav_color}', '#{fav_player}')");
 	redirect '/'
 end
+
+error message im getting when i try to run this.
+
+# app.rb:13:in `initialize': could not translate host name "favoritedetails.cghc5iiuyixp.us-west-2.rds.amazonaws.com:5432" to address: nodename nor servname provided, or not known (PG::ConnectionBad)
+# 	from app.rb:13:in `new'
+# 	from app.rb:13:in `<main> 
