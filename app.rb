@@ -30,3 +30,34 @@ post '/favoritedetails' do
 	db.exec("INSERT INTO favoritedetails(name, age, fav_num, second_fav_num, third_fav_num, fav_team, fav_color, fav_player) VALUES('#{name}', '#{age}', '#{fav_num}', '#{second_fav_num}', '#{third_fav_num}', '#{fav_team}', '#{fav_color}', '#{fav_player}')");
 	redirect '/'
 end
+
+post '/update_column' do
+	new_data = params[:new_data]
+	old_data = params[:old_data]
+	column = params[:table_column]
+
+	case column
+	when 'name'
+		db.exec("UPDATE favoritedetails SET name = '#{new_data}' WHERE name = '#{old_data}'");
+	when 'age'
+		db.exec("UPDATE favoritedetails SET age = '#{new_data}' WHERE age = '#{old_data}'");
+	when 'fav_num'
+		db.exec("UPDATE favoritedetails SET fav_num = '#{new_data}' WHERE fav_num = '#{old_data}'");
+	when 'second_fav_num'
+		db.exec("UPDATE favoritedetails SET second_fav_num = '#{new_data}' WHERE second_fav_num = '#{old_data}'");
+	when 'third_fav_num'
+		db.exec("UPDATE favoritedetails SET third_fav_num = '#{new_data}' WHERE third_fav_num = '#{old_data}");
+	when 'fav_team'
+		db.exec("UPDATE favoritedetails SET fav_team = '#{new_data}' WHERE fav_team = '#{old_data}");
+	when 'fav_color'
+		db.exec("UPDATE favoritedetails SET fav_color = '#{new_data}' WHERE fav_color = '#{old_data}");
+	when 'fav_player'
+		db.exec("UPDATE favoritedetails SET fav_player = '#{new_data}' WHERE fav_player = '#{old_data}");
+	end
+		redirect '/'
+end
+
+post '/delete_all' do
+	db.exec("DETELE FROM column");
+	redirect '/'
+end

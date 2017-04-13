@@ -1,6 +1,7 @@
 <form action="/favoritedetails" method="post">
+<div class="bgcss">
 
-	<p>Full Name:<input type="text" name="name"></p>
+	<p>Name:<input type="text" name="name"></p></h2>
 
 	<p>Age:<input type="text" name="age"></p>
 
@@ -10,10 +11,10 @@
 
 	<p>Favorite Sports Team:<input type="text" name="fav_team"></p>
 
-	<p>Favorite Athlete:<input type="text" name="fav_player"></p>
+	<p>Favorite Athlete:<input type="text" name="fav_player" class="boxcss"></p>
 
 	<input type="submit" name="Just Do It!">
-	</form>
+	</form></div>
 	<p><table></p>
 		<thead>
 			<tr>
@@ -42,3 +43,30 @@
 			<%end%>
 		</tbody>
 	</table>
+
+	<form action= "/update_column" method= "post">
+  		
+  		<select name="table_column">
+
+
+  	<option value='name'>Name</option>
+		<option value='age'>Age</option>
+		<option value='fav_num'>1st Favorite Number</option>
+		<option value='second_fav_num'>2nd Favorite Number</option>
+		<option value='third_fav_num'>3rd Favorite Number</option>
+		<option value='fav_color'>Favorite Color</option>
+		<option value='fav_team'>Favorite Sports Team</option>
+		<option value='fav_player'>Favorite Athlete</option>
+	</select>
+	<br>
+
+<div class="bgcss">
+	New Input: <input type="text" name="new_data"><br>
+	Current Input: <input type="text" name="old_data"><br>
+	   <input type="submit" value="Update">
+	   </form>
+
+   
+   <form action='/delete_all' method='post'>
+   	<input type = "submit" value = "Delete Data">
+   </form></div>
