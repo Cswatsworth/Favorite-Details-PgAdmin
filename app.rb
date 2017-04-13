@@ -57,7 +57,7 @@ post '/update_column' do
 		redirect '/'
 end
 
-post '/delete_all' do
+post '/delete_table' do
 	db.exec("DETELE FROM column");
 	redirect '/'
 end
